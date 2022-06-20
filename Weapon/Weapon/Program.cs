@@ -1,27 +1,40 @@
 ﻿// See https://aka.ms/new-console-template for more information
 class Weapon
 {
-    public int Damage;
-    public int Bullets;
+    private int _damage;
+    private int _bullets;
+
+    private void Reload()
+    {
+        _bullets = 30;
+    }
 
     public void Fire(Player player)
     {
-        player.Health -= Damage;
-        Bullets -= 1;
+        if (_bullets != 0)
+            player.TakeDamage(_damage);
+
+        else
+            Reload();
     }
 }
 
 class Player
 {
-    public int Health;
+    private int _health;
+
+    public void TakeDamage(int damage)
+    {
+        _health -= damage;
+    }
 }
 
 class Bot
 {
-    public Weapon Weapon;
+    private Weapon _weapon;
 
     public void OnSeePlayer(Player player)
     {
-        Weapon.Fire(player);
+        _weapon.Fire(player);
     }
 }
