@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Weapon",
+    "\\Weapon\\Weapon"
   ],
-  "SelectedNode": "\\E:\\Napilnik1",
+  "SelectedNode": "\\Weapon\\Weapon\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

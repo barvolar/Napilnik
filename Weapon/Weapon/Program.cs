@@ -2,11 +2,12 @@
 class Weapon
 {
     private int _damage;
-    private int _bullets;
+    private int _bulletsCount;
+    private int _maxBulletsCount = 5;
 
     private void Reload()
     {
-        _bullets = 30;
+        _bullets = _maxBulletsCount;
     }
 
     public void Fire(Player player)
